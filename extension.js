@@ -900,7 +900,8 @@ class ClipboardIndicator extends PanelMenu.Button {
     if (STRIP_TEXT && text) {
       text = text.trim();
     }
-    if (!text) {
+
+    if (!text || !text.trim() || text.trim().length <= 1) {
       return;
     }
 
